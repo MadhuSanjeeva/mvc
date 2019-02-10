@@ -30,6 +30,12 @@
 	<!-- added resources folder --> 
 	<mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>
 	
+	<!-- load custom message resources -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+	
+		<property name="basenames" value="resources/messages"></property>
+	</bean>
+	
 	<util:properties id="countryOptions" location="classpath:../../resources/countries.properties" />
 
 </beans>
